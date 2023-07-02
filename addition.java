@@ -3,10 +3,10 @@ class addition{
         int x = 1;
         int y = 5;
         int output = addNums(x, y);
-        System.out.println(output);
+        System.out.println(addNums(x, y));
     } 
     // a function that return sum of two numbers
-    public static int addNums(int num1, int num2){
+    public int addNums(int num1, int num2){
         int sum = num1 + num2;
         return sum;
 }
