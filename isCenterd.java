@@ -6,7 +6,7 @@
  */
 class isCenterd{
     public static void main(String[] args){
-        int[] array1= {10};
+        int[] array1= {1};
         int output= iscenterd(array1);
         System.out.println(output);
     }
