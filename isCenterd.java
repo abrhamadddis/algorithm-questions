@@ -16,7 +16,7 @@ class isCenterd{
             return 0;
         }
         else{
-            int midIndex = (arrayLength - 1)/2;
+            int midIndex = (arrayLength)/2;
             for (int i = 0; i <= arrayLength - 1; i++){
                 if( array[i] <= array[midIndex] && i != midIndex){
                     return 0;
