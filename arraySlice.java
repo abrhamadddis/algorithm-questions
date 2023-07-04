@@ -5,28 +5,21 @@
 The function signature is:
 char[ ] f(char[ ] a, int start, int len)
  */
-
+import java.util.Arrays;
 
 public class arraySlice {
     public static void main(String[] args){
-        char[] test = sliceArray(new char[]{'a', 'b', 'c'}, 0, 1);
-        System.out.println(new String(test));
+        char[] test = sliceArray(new char[]{'a', 'b', 'c'}, 0, 4);
+        System.out.println(Arrays.toString(test));
     }
     public static char[] sliceArray(char[] a, int start, int len){
-        int count = 0;
-        char[] newArray = {};
-        int k = 0;
-        for( int i = start; i <= a.length -1; i++){
-            count = count + 1;
-        }
-        if( count > len){
+        if( start < 0 || len < 0 || start + len - 1 >= a.length){
             return null;
         }
-        else{
-            for (int j = start; j <= a.length - 1; j++){
-                newArray[k] = a[j];
-                k++;
-            }
+        char[] newArray = new  char[len];
+        for (int i=start, j=0; j<len; i++, j++)
+        {
+            newArray[j] = a[i];
         }
         return newArray;
     }
